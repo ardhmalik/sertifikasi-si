@@ -3,7 +3,7 @@
 
 <!-- Footer -->
 <footer class="bg-light text-center py-3 mt-5">
-    <a href="https://github/ardhmalik">
+    <a href="https://github.com/ardhmalik/sertifikasi-si">
         <i class="bi bi-github"></i>@ardhmalik
     </a>
     <br>

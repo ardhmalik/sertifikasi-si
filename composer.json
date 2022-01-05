@@ -1,0 +1,15 @@
+{
+    "name": "ardhmalik/sertifikasi-si",
+    "description": "System Analyst Sertification on Universitas Nusa Mandiri",
+    "type": "project",
+    "authors": [
+        {
+            "name": "ardhmalik",
+            "email": "ardhiansyahmalik1200@gmail.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "server": "php -S localhost:8080"
+    }
+}

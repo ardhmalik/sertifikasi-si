@@ -10,6 +10,6 @@
     ],
     "require": {},
     "scripts": {
-        "server": "php -S malika11182611.netlify.app"
+        "server": "php -S localhost:8080"
     }
 }

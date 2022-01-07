@@ -6,7 +6,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Searching.php";
 include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Sorting.php";
 
 /**
- * MyArray()
+ * Class MyArray()
  * For generate new array 
  */
 class myArray

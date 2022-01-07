@@ -19,7 +19,9 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                 <div class="col-12 py-3">
                     <h3>
                         <mark>
-                            [ <?php getArray(5); ?> ]
+                            [
+                                <?php $myArray->getArray(5) ?>
+                            ]
                         </mark>
                     </h3>
                 </div>
@@ -64,7 +66,11 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-selection" role="tabpanel" aria-labelledby="pills-selection-tab">1</div>
+                        <div class="tab-pane fade show active" id="pills-selection" role="tabpanel" aria-labelledby="pills-selection-tab">
+                            <?php
+                                // swapArray();
+                            ?>
+                        </div>
                         <div class="tab-pane fade" id="pills-bubble" role="tabpanel" aria-labelledby="pills-bubble-tab">2</div>
                         <div class="tab-pane fade" id="pills-merge" role="tabpanel" aria-labelledby="pills-merge-tab">3</div>
                         <div class="tab-pane fade" id="pills-quick" role="tabpanel" aria-labelledby="pills-quick-tab">4</div>

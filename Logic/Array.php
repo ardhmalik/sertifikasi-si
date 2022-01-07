@@ -1,11 +1,5 @@
 <?php
 /**
- * Connect to file Sorting & Searching
- */
-include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Searching.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Sorting.php";
-
-/**
  * Class MyArray()
  * For generate new array 
  */

@@ -1,7 +1,10 @@
 <?php
 /**
- * Sorting & Searcing Page
+ * Connect to file Array, Sorting & Searching
  */
+// include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Array.php";
+// include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Searching.php";
+// include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Sorting.php";
 include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
 ?>
 
@@ -20,7 +23,13 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                     <h3>
                         <mark>
                             [
-                                <?php $myArray->getArray(5) ?>
+                                <?php 
+                                    /**
+                                     * getArrays()
+                                     * Memanggil fungsi untuk mencetak array 
+                                     */
+                                    getArrays();
+                                ?>
                             ]
                         </mark>
                     </h3>
@@ -68,7 +77,9 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-selection" role="tabpanel" aria-labelledby="pills-selection-tab">
                             <?php
-                                // swapArray();
+                                /**
+                                 * Selection Sort
+                                 */
                             ?>
                         </div>
                         <div class="tab-pane fade" id="pills-bubble" role="tabpanel" aria-labelledby="pills-bubble-tab">2</div>

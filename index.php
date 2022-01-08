@@ -12,7 +12,7 @@ if ($uri === "/")
 } elseif ($uri === "/logic") 
 {
     $page = "Logic.php";
-    $title = "Algrithm Implementation";
+    $title = "Algorithm Implementation";
 } elseif ($uri === "/my5plans") 
 {
     $page = "InProcess.php";

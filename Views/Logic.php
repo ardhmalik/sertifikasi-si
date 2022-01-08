@@ -1,10 +1,7 @@
 <?php
 /**
- * Connect to file Array, Sorting & Searching
+ * Mengkoneksikan file index.php
  */
-// include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Array.php";
-// include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Searching.php";
-// include $_SERVER['DOCUMENT_ROOT'] . "/Logic/Sorting.php";
 include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
 ?>
 
@@ -80,6 +77,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                                 /**
                                  * Selection Sort
                                  */
+                                // Selection();
                             ?>
                         </div>
                         <div class="tab-pane fade" id="pills-bubble" role="tabpanel" aria-labelledby="pills-bubble-tab">2</div>

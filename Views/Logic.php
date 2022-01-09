@@ -22,10 +22,10 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                             [
                                 <?php 
                                     /**
-                                     * getArrays()
-                                     * Memanggil fungsi untuk mencetak array 
+                                     * getArrays($arr)
+                                     * $arr = $newArray 
                                      */
-                                    getArrays();
+                                    getArrays($newArray);
                                 ?>
                             ]
                         </mark>
@@ -56,7 +56,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                 <div class="tab-pane fade show active" id="sort" role="tabpanel" aria-labelledby="sort-tab">
                     <ul class="nav nav-pills my-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-selection-tab" data-bs-toggle="pill" data-bs-target="#pills-selection" type="button" role="tab" aria-controls="pills-selection" aria-selected="true">Selection</button>
+                            <button class="nav-link" id="pills-selection-tab" data-bs-toggle="pill" data-bs-target="#pills-selection" type="button" role="tab" aria-controls="pills-selection" aria-selected="true">Selection</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-bubble-tab" data-bs-toggle="pill" data-bs-target="#pills-bubble" type="button" role="tab" aria-controls="pills-bubble" aria-selected="false">Bubble</button>
@@ -68,22 +68,25 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                             <button class="nav-link" id="pills-quick-tab" data-bs-toggle="pill" data-bs-target="#pills-quick" type="button" role="tab" aria-controls="pills-quick" aria-selected="false">Quick</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-insertion-tab" data-bs-toggle="pill" data-bs-target="#pills-insertion" type="button" role="tab" aria-controls="pills-insertion" aria-selected="false">Insertion</button>
+                            <button class="nav-link active" id="pills-insertion-tab" data-bs-toggle="pill" data-bs-target="#pills-insertion" type="button" role="tab" aria-controls="pills-insertion" aria-selected="false">Insertion</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-selection" role="tabpanel" aria-labelledby="pills-selection-tab">
-                            <?php
-                                /**
-                                 * Selection Sort
-                                 */
-                                // Selection();
-                            ?>
+                        <div class="tab-pane fade" id="pills-selection" role="tabpanel" aria-labelledby="pills-selection-tab">
+                            
                         </div>
                         <div class="tab-pane fade" id="pills-bubble" role="tabpanel" aria-labelledby="pills-bubble-tab">2</div>
                         <div class="tab-pane fade" id="pills-merge" role="tabpanel" aria-labelledby="pills-merge-tab">3</div>
                         <div class="tab-pane fade" id="pills-quick" role="tabpanel" aria-labelledby="pills-quick-tab">4</div>
-                        <div class="tab-pane fade" id="pills-insertion" role="tabpanel" aria-labelledby="pills-insertion-tab">5</div>
+                        <div class="tab-pane fade show active" id="pills-insertion" role="tabpanel" aria-labelledby="pills-insertion-tab">
+                            <?php
+                                /**
+                                 * insertionSort($arr)
+                                 * $arr = $newArray
+                                 */
+                                // insertionSort($newArray);
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <!-- Searching Tab -->

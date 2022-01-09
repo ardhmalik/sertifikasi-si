@@ -1,22 +1,17 @@
 <?php
 /**
  * $newArray
- * Variabel untuk menyimpan array
+ * Variabel untuk menyimpan nilai array
  */ 
 $newArray = [];
 /**
- * $count
- * Variabel untuk melakukan loop generate array
- */
-$count = 0;
-/**
- * $arr
+ * $qty
  * Variabel untuk menentukan jumlah array yang dibuat
  */
-$arr = 5;
+$qty = 6;
 
 // Perulangan for untuk melakukan generate array
-for ($count; $count < $arr; $count++) {
+for ($i=0; $i < $qty; $i++) {
     // Me-generate bilangan integer dari 1 - 100
     $random = mt_rand(1, 100);
     // Menyimpan bilangan ke variabel $newArray
@@ -26,8 +21,9 @@ for ($count; $count < $arr; $count++) {
 /**
  * getArrays()
  * Fungsi yang digunakan untuk mencetak nilai dari $newArray
+ * Parameter $arr menyatakan data array  
  */
-function getArrays()
+function getArrays($arr)
 {
     /**
      * global $newArray
@@ -36,28 +32,12 @@ function getArrays()
     global $newArray;
     
     // Perulangan untuk mencetak array
-    for ($i=0; $i <= count($newArray); $i++) { 
-        if ($i < count($newArray)-1) {
-            echo "$newArray[$i], ";
+    for ($i=0; $i <= count($arr); $i++) { 
+        if ($i < count($arr)-1) {
+            echo "$arr[$i], ";
         } else {
-            echo $newArray[$i];
+            echo $arr[$i];
         }
     }
-}
-
-/**
- * getArrayIndex($i)
- * Fungsi untuk mencetak nilai array berdasarkan indeks yang diinginkan
- * Parameter $i menyatakan indeks
- */
-function getArrayIndex($i)
-{
-    /**
-     * global $newArray
-     * Mendefinisikan ulang variabel $newArray yang berada di luar fungsi
-     */
-    global $newArray;
-
-    echo $newArray[$i];
 }
 ?>

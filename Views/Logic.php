@@ -84,7 +84,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                                  * insertionSort($arr)
                                  * $arr = $newArray
                                  */
-                                // insertionSort($newArray);
+                                insertionSort($newArray);
                             ?>
                         </div>
                     </div>

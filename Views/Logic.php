@@ -93,7 +93,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                 <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
                     <ul class="nav nav-pills my-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-linier-tab" data-bs-toggle="pill" data-bs-target="#pills-linier" type="button" role="tab" aria-controls="pills-linier" aria-selected="true">Linier</button>
+                            <button class="nav-link active" id="pills-linear-tab" data-bs-toggle="pill" data-bs-target="#pills-linear" type="button" role="tab" aria-controls="pills-linear" aria-selected="true">Linear</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-binary-tab" data-bs-toggle="pill" data-bs-target="#pills-binary" type="button" role="tab" aria-controls="pills-binary" aria-selected="false">Binary</button>
@@ -106,8 +106,26 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-linier" role="tabpanel" aria-labelledby="pills-linier-tab">1</div>
-                        <div class="tab-pane fade" id="pills-binary" role="tabpanel" aria-labelledby="pills-binary-tab">2</div>
+                        <div class="tab-pane fade show active" id="pills-linear" role="tabpanel" aria-labelledby="pills-linear-tab">
+                            <?php
+                                /**
+                                 * linearSearch($arr)
+                                 * $arr = $newArray
+                                 */
+                                $search = $newArray[2];
+                                linearSearch($search, $newArray);
+                            ?>
+                        </div>
+                        <div class="tab-pane fade" id="pills-binary" role="tabpanel" aria-labelledby="pills-binary-tab">
+                            <?php
+                                /**
+                                 * binarySearch($arr)
+                                 * $arr = $newArray
+                                 */
+                                $search = $newArray[2];
+                                binarySearch($search, $newArray);
+                            ?>
+                        </div>
                         <div class="tab-pane fade" id="pills-straitmaxmin" role="tabpanel" aria-labelledby="pills-straitmaxmin-tab">3</div>
                         <div class="tab-pane fade" id="pills-dc" role="tabpanel" aria-labelledby="pills-dc-tab">4</div>
                     </div>

@@ -61,6 +61,9 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                 <div class="tab-pane fade show active" id="sort" role="tabpanel" aria-labelledby="sort-tab">
                     <ul class="nav nav-pills my-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-insertion-tab" data-bs-toggle="pill" data-bs-target="#pills-insertion" type="button" role="tab" aria-controls="pills-insertion" aria-selected="false">Insertion</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-selection-tab" data-bs-toggle="pill" data-bs-target="#pills-selection" type="button" role="tab" aria-controls="pills-selection" aria-selected="true">Selection</button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -72,17 +75,8 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-quick-tab" data-bs-toggle="pill" data-bs-target="#pills-quick" type="button" role="tab" aria-controls="pills-quick" aria-selected="false">Quick</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-insertion-tab" data-bs-toggle="pill" data-bs-target="#pills-insertion" type="button" role="tab" aria-controls="pills-insertion" aria-selected="false">Insertion</button>
-                        </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade" id="pills-selection" role="tabpanel" aria-labelledby="pills-selection-tab">
-                            
-                        </div>
-                        <div class="tab-pane fade" id="pills-bubble" role="tabpanel" aria-labelledby="pills-bubble-tab">2</div>
-                        <div class="tab-pane fade" id="pills-merge" role="tabpanel" aria-labelledby="pills-merge-tab">3</div>
-                        <div class="tab-pane fade" id="pills-quick" role="tabpanel" aria-labelledby="pills-quick-tab">4</div>
                         <div class="tab-pane fade show active" id="pills-insertion" role="tabpanel" aria-labelledby="pills-insertion-tab">
                             <?php
                                 /**
@@ -91,6 +85,46 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                                  */
                                 insertionSort($newArray);
                             ?>
+                        </div>
+                        <div class="tab-pane fade" id="pills-selection" role="tabpanel" aria-labelledby="pills-selection-tab">
+                            <h5 class="text-center">
+                                In Development
+                            </h5>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <img src="../Assets/img/Developer activity-bro.svg" alt="In Development">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-bubble" role="tabpanel" aria-labelledby="pills-bubble-tab">
+                            <h5 class="text-center">
+                                In Development
+                            </h5>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <img src="../Assets/img/Developer activity-bro.svg" alt="In Development">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-merge" role="tabpanel" aria-labelledby="pills-merge-tab">
+                            <h5 class="text-center">
+                                In Development
+                            </h5>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <img src="../Assets/img/Developer activity-bro.svg" alt="In Development">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-quick" role="tabpanel" aria-labelledby="pills-quick-tab">
+                            <h5 class="text-center">
+                                In Development
+                            </h5>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <img src="../Assets/img/Developer activity-bro.svg" alt="In Development">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,8 +165,26 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                                 binarySearch($search, $newArray);
                             ?>
                         </div>
-                        <div class="tab-pane fade" id="pills-straitmaxmin" role="tabpanel" aria-labelledby="pills-straitmaxmin-tab">3</div>
-                        <div class="tab-pane fade" id="pills-dc" role="tabpanel" aria-labelledby="pills-dc-tab">4</div>
+                        <div class="tab-pane fade" id="pills-straitmaxmin" role="tabpanel" aria-labelledby="pills-straitmaxmin-tab">
+                            <h5 class="text-center">
+                                In Development
+                            </h5>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <img src="../Assets/img/Developer activity-bro.svg" alt="In Development">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-dc" role="tabpanel" aria-labelledby="pills-dc-tab">
+                            <h5 class="text-center">
+                                In Development
+                            </h5>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <img src="../Assets/img/Developer activity-bro.svg" alt="In Development">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

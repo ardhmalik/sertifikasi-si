@@ -1,6 +1,6 @@
 <!-- Page Title -->
-<h2 class="text-center">
-    <b>My Arch</b>
+<h2 class="text-center mb-4">
+    <b><?= $title ?></b>
 </h2>
 
 <div class="row justify-content-md-center">

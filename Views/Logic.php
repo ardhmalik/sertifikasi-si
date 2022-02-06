@@ -5,6 +5,11 @@
 include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
 ?>
 
+<!-- Page Title -->
+<h2 class="text-center mb-4">
+    <b><?= $title ?></b>
+</h2>
+
 <!-- Algorithm Sections -->
 <div class="row justify-content-center">
     <!-- Showing result of Generate array -->

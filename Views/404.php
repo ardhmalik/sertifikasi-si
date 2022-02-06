@@ -1,3 +1,8 @@
+<!-- Page Title -->
+<h2 class="text-center mb-4">
+    <b><?= $title ?></b>
+</h2>
+
 <!-- 404 Not Found -->
 <div class="row justify-content-center">
     <div class="col-8">

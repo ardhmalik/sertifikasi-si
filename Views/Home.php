@@ -20,11 +20,11 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="<?php $_SERVER['HTTP_HOST'] ?> /my5plans">
+                    <a href="<?php $_SERVER['HTTP_HOST'] ?> /mytyplan">
                         <img src="../Assets/img/Notes.png" class="d-block w-100" alt="CRUD My5th Plans">
                         <div class="carousel-caption">
-                            <h4>My5th Plans</h4>
-                            <p>CRUD page that presents a list of plans for the next 5 years</p>
+                            <h4>My This Year Plan</h4>
+                            <p>CRUD page that presents a list of plans for this year</p>
                         </div>
                     </a>
                 </div>

@@ -1,30 +1,31 @@
 <?php
 /**
- * Basic Routing use IF Statement
+ * Basic Routing use SWITCH Statement
  */
 $uri = $_SERVER['REQUEST_URI'];
 $page = "";
 
-if ($uri === "/") 
-{
-    $page = "Home.php";
-    $title = "My Home";
-} elseif ($uri === "/logic") 
-{
-    $page = "Logic.php";
-    $title = "Algorithm Implementation";
-} elseif ($uri === "/my5plans") 
-{
-    $page = "InProcess.php";
-    $title = "In Development Process";
-} elseif ($uri === "/device") 
-{
-    $page = "Device.php";
-    $title = "My Arch";
-} else 
-{
-    $page = "404.php";
-    $title = "[404] Not Found";
+switch ($uri) {
+    case '/':
+        $page = "Home.php";
+        $title = "My Home";
+        break;
+    case '/logic':
+        $page = "Logic.php";
+        $title = "Algorithm Implementation";
+        break;
+    case '/mytyplan':
+        $page = "Mytyplan.php";
+        $title = "My This Year Plan";
+        break;
+    case '/device':
+        $page = "Device.php";
+        $title = "My Arch";
+        break;
+    default:
+        $page = "404.php";
+        $title = "[404] Not Found";
+        break;
 }
 
 /**

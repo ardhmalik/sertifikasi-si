@@ -7,6 +7,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/d514e070a0.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../Assets/css/main.css">
     <title><?= $title ?> | Malik Ardhiansyah ~ 11182611</title>
@@ -15,8 +17,8 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-light bg-light mb-3">
-    <div class="container-fluid">
-        <a href="/" class="navbar-brand">Malik Ardhiansyah</a>
+    <div class="container">
+        <a href="/" class="navbar-brand">Malik Ardhiansyah | 11182611</a>
         <div class="d-flex">
             <?php
                 date_default_timezone_set("Asia/Jakarta");

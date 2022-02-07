@@ -156,14 +156,14 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
                             ?>
                         </div>
                         <div class="tab-pane fade" id="pills-binary" role="tabpanel" aria-labelledby="pills-binary-tab">
-                            <?php
-                                /**
-                                 * binarySearch($arr)
-                                 * $arr = $newArray
-                                 */
-                                $search = $newArray[2];
-                                binarySearch($search, $newArray);
-                            ?>
+                            <h5 class="text-center">
+                                In Development
+                            </h5>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <img src="../Assets/img/Developer activity-bro.svg" alt="In Development">
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="pills-straitmaxmin" role="tabpanel" aria-labelledby="pills-straitmaxmin-tab">
                             <h5 class="text-center">

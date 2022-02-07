@@ -48,7 +48,8 @@ function insertionSort($arr)
         echo "<br>";
     }
     
-    echo "<h3 class='text-center mt-2'><mark>[ ";
+    echo "<h5 class='text-center fst-italic my-2'>Sorting Result</h5> ";
+    echo "<h3 class='text-center'><mark>[ ";
     getArrays($arr);
     echo " ]</mark></h3>";
 }

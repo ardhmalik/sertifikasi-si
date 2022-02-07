@@ -6,12 +6,6 @@
  */
 function linearSearch($num, $arr)
 {
-    /**
-     * global $newArray
-     * Mendefinisikan ulang variabel $newArray yang berada di luar fungsi
-     */
-    global $newArray;
-
     $i = 0;
     $result = false;
     $jml = count($arr);

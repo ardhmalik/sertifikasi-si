@@ -7,11 +7,6 @@
 function insertionSort($arr) 
 {
     /**
-     * global $newArray
-     * Mendefinisikan ulang variabel $newArray yang berada di luar fungsi
-     */
-    global $newArray;
-    /**
      * $jml
      * Variabel untuk menghitung panjang array $arr
      */

@@ -1,7 +1,7 @@
 <?php
 class Algorithm
 {
-    public $new_array;
+    private $new_array;
 
     public function __construct()
     {
@@ -24,7 +24,7 @@ class Algorithm
                 $this->input_angka();
                 break;
             case 4:
-                
+                $this->print_array($this->new_array);
                 echo "\n>>>>>>>>> KELUAR PROGRAM >>>>>>>>>";
                 break;
             default:
@@ -40,7 +40,7 @@ class Algorithm
         
         $qty = trim(fgets(STDIN));
 
-        if ($qty == 0 ) {
+        if ($qty <= 0 ) {
             echo "Angka harus lebih dari 0!\n";
             $this->input_angka();
         } elseif ($qty > 10) {
@@ -55,8 +55,15 @@ class Algorithm
             echo "Angka ke-$no : ";
             $int = trim(fgets(STDIN));
 
-            array_push($this->new_array, $int);
+            if (strlen($int) <= 2) {
+                array_push($this->new_array, $int);
+            } else {
+                echo "Masukkan angka dua digit!\n";
+                $i -= 1;
+            }
         }
+
+        // $qty = 0;
 
         $this->index();
         // var_dump($this->new_array);

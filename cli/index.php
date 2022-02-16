@@ -8,6 +8,27 @@ class Algorithm
         $this->new_array = [];
     }
 
+    private function print_array($array)
+    {
+        $arr = implode(", ", $array);
+        echo "[ $arr ]";
+    }
+
+    private function goto_menu($res)
+    {
+        switch ($res) {
+            case "y":
+                $this->index();
+                break;
+            case "n":
+                echo "\n>>>>>>>>> KELUAR PROGRAM >>>>>>>>>";
+                die;
+                break;
+            default:
+                $this->index();
+                break;
+        }
+    }
     public function index()
     {
         echo "\n============== MENU ==============\n";
@@ -24,9 +45,11 @@ class Algorithm
             case 1:
                 $this->input_angka();
                 break;
+            case 2:
+                $this->insertion_sort($this->new_array);
+                break;
             case 4:
                 echo "\n>>>>>>>>> KELUAR PROGRAM >>>>>>>>>";
-                var_dump($this->new_array);
                 die;
                 break;
             default:
@@ -82,7 +105,49 @@ class Algorithm
             }
         }
 
+        echo "----------------------------------\n";
+
         $this->index();
+    }
+
+    public function insertion_sort($arr)
+    {
+        if ($this->new_array == null) {
+            echo "-----------------------------------\n";
+            echo "Masukkan data angka terlebih dahulu!\n\n";
+            $this->index();
+        } else {
+            $count = count($arr);
+            
+            echo "\n======== Insertion Sort ========\n";
+            echo "Data array   : ";
+            $this->print_array($arr);
+            echo "\n";
+    
+            for ($i=1; $i < $count; $i++) { 
+                $key = $arr[$i];
+                $temp = $i - 1;
+                
+                while ($temp >= 0 && $key < $arr[$temp]) {
+                    $arr[$temp+1] = $arr[$temp];
+                    $temp = $temp - 1;
+                }
+        
+                $arr[$temp+1] = $key;
+    
+                echo "\nIterasi ke-$i : ";
+                $this->print_array($arr);
+            }
+            
+            echo "\n\nHasil sorting : ";
+            $this->print_array($arr);
+            echo "\n";
+            echo "--------------------------------\n";
+            echo "Kembali ke halaman menu [y/n]? ";
+            $res = trim(fgets(STDIN));
+            echo "--------------------------------\n";
+            $this->goto_menu($res);
+        }
     }
 }
 

@@ -39,7 +39,7 @@ class Algorithm
         echo "[4] Selesai \n\n";
         echo "Masukkan pilihan [1, 2, 3, 4] : ";
         $input = trim(fgets(STDIN));
-        echo "----------------------------------\n";
+        echo "----------------------------------\n\n";
 
         switch ($input) {
             case 1:
@@ -47,6 +47,9 @@ class Algorithm
                 break;
             case 2:
                 $this->insertion_sort($this->new_array);
+                break;
+            case 3:
+                $this->linear_search($this->new_array);
                 break;
             case 4:
                 echo "\n>>>>>>>>> KELUAR PROGRAM >>>>>>>>>";
@@ -105,14 +108,14 @@ class Algorithm
             }
         }
 
-        echo "----------------------------------\n";
+        echo "----------------------------------\n\n";
 
         $this->index();
     }
 
     public function insertion_sort($arr)
     {
-        if ($this->new_array == null) {
+        if ($arr == null) {
             echo "-----------------------------------\n";
             echo "Masukkan data angka terlebih dahulu!\n\n";
             $this->index();
@@ -141,12 +144,58 @@ class Algorithm
             
             echo "\n\nHasil sorting : ";
             $this->print_array($arr);
-            echo "\n";
-            echo "--------------------------------\n";
+            echo "\n--------------------------------\n";
             echo "Kembali ke halaman menu [y/n]? ";
             $res = trim(fgets(STDIN));
-            echo "--------------------------------\n";
+            echo "--------------------------------\n\n";
             $this->goto_menu($res);
+        }
+    }
+
+    public function linear_search($arr)
+    {
+        if ($arr == null) {
+            echo "-----------------------------------\n";
+            echo "Masukkan data angka terlebih dahulu!\n\n";
+            $this->index();
+        } else {
+            $int = 0;
+            $result = false;
+            $count = count($arr);
+
+            echo "\n======== Linear Search ========\n";
+            echo "Data array   : ";
+            $this->print_array($arr);
+
+            echo "\nMasukkan angka yang dicari : ";
+            $search = trim(fgets(STDIN));
+
+            if (!is_numeric($search)) {
+                echo "--------------------------------\n";
+                echo "Masukkan bilangan bulat!\n";
+                $this->linear_search($arr);
+                
+            } else {
+                while ($int < $count) {
+                    if ($arr[$int] == $search) {
+                        echo "\nAngka $arr[$int] ditemukan";
+                        $result = true;
+                        break;
+                    }
+                    $int++;
+                }
+    
+                if ($result == false) {
+                    echo "\nAngka $search tidak ditemukan";
+                }
+    
+                echo "\n--------------------------------\n";
+                echo "Kembali ke halaman menu [y/n]? ";
+                $res = trim(fgets(STDIN));
+                echo "--------------------------------\n\n";
+                $this->goto_menu($res);
+            }
+
         }
     }
 }

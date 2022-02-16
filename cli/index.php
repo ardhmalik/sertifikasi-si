@@ -92,10 +92,7 @@ class Algorithm
             echo "Angka ke-$no : ";
             $int = trim(fgets(STDIN));
 
-            if ($int == null) {
-                echo "Masukkan angka minimal satu digit!\n\n";
-                $i -= 1;
-            } else {
+            if (is_numeric($int)) {
                 if ($int == 0) {
                     echo "Masukkan angka lebih dari 0!\n\n";
                     $i -= 1;
@@ -105,6 +102,9 @@ class Algorithm
                 } else {
                     array_push($this->new_array, $int);
                }
+            } else {
+                echo "Masukkan bilangan bulat!\n\n";
+                $i -= 1;
             }
         }
 

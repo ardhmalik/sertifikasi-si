@@ -157,5 +157,5 @@
 
 <!-- Buttons Back to Home -->
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/Parts/Button.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/web/Parts/Button.php';
 ?>

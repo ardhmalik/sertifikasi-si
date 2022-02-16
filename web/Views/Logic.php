@@ -2,7 +2,7 @@
 /**
  * Mengkoneksikan file index.php
  */
-include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/web/Logic/index.php";
 ?>
 
 <!-- Page Title -->
@@ -196,5 +196,5 @@ include $_SERVER['DOCUMENT_ROOT'] . "/Logic/index.php";
 /**
  * Buttons Back to Home
  */ 
-include $_SERVER['DOCUMENT_ROOT'] . "/Parts/Button.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/web/Parts/Button.php";
 ?>

@@ -31,7 +31,7 @@ switch ($uri) {
 /**
  * Views
  */
-require "./Parts/Header.php";
-include "./Views/$page";
-require "./Parts/Footer.php";
+require "./web/Parts/Header.php";
+include "./web/Views/$page";
+require "./web/Parts/Footer.php";
 ?>

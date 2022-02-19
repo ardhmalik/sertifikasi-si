@@ -29,6 +29,7 @@ class Algorithm
                 break;
         }
     }
+    
     public function index()
     {
         echo "\n============== MENU ==============\n";
@@ -63,7 +64,7 @@ class Algorithm
 
     public function input_angka()
     {
-        if ($this->new_array == !null) {
+        if ($this->new_array != null) {
             echo "Data sudah tersedia!\n";
             $this->index();
         }
@@ -116,10 +117,10 @@ class Algorithm
     public function insertion_sort($arr)
     {
         if ($arr == null) {
-            echo "-----------------------------------\n";
             echo "Masukkan data angka terlebih dahulu!\n\n";
             $this->index();
         } else {
+            var_dump(memory_get_usage(true));
             $count = count($arr);
             
             echo "\n======== Insertion Sort ========\n";
@@ -148,6 +149,7 @@ class Algorithm
             echo "Kembali ke halaman menu [y/n]? ";
             $res = trim(fgets(STDIN));
             echo "--------------------------------\n\n";
+            var_dump(memory_get_usage(true));
             $this->goto_menu($res);
         }
     }
@@ -155,10 +157,11 @@ class Algorithm
     public function linear_search($arr)
     {
         if ($arr == null) {
-            echo "-----------------------------------\n";
             echo "Masukkan data angka terlebih dahulu!\n\n";
             $this->index();
         } else {
+            var_dump(memory_get_usage(true));
+
             $int = 0;
             $result = false;
             $count = count($arr);
@@ -178,9 +181,8 @@ class Algorithm
             } else {
                 while ($int < $count) {
                     if ($arr[$int] == $search) {
-                        echo "\nAngka $arr[$int] ditemukan";
+                        echo "\nAngka $search ditemukan";
                         $result = true;
-                        break;
                     }
                     $int++;
                 }
@@ -193,9 +195,9 @@ class Algorithm
                 echo "Kembali ke halaman menu [y/n]? ";
                 $res = trim(fgets(STDIN));
                 echo "--------------------------------\n\n";
+                var_dump(memory_get_usage(true));
                 $this->goto_menu($res);
             }
-
         }
     }
 }

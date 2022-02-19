@@ -29,6 +29,13 @@ class Algorithm
                 break;
         }
     }
+
+    private function execution_time($start=null, $end=null)
+    {
+        $times = $end - $start;
+        $exe_time = round($times, 6);
+        echo "$exe_time ms";
+    }
     
     public function index()
     {
@@ -120,7 +127,7 @@ class Algorithm
             echo "Masukkan data angka terlebih dahulu!\n\n";
             $this->index();
         } else {
-            var_dump(memory_get_usage(true));
+            $start_time = microtime(true);
             $count = count($arr);
             
             echo "\n======== Insertion Sort ========\n";
@@ -145,11 +152,15 @@ class Algorithm
             
             echo "\n\nHasil sorting : ";
             $this->print_array($arr);
+
+            $end_time = microtime(true);
+            echo "\n\n";
+            $this->execution_time($start_time, $end_time);
+
             echo "\n--------------------------------\n";
             echo "Kembali ke halaman menu [y/n]? ";
             $res = trim(fgets(STDIN));
             echo "--------------------------------\n\n";
-            var_dump(memory_get_usage(true));
             $this->goto_menu($res);
         }
     }
@@ -160,19 +171,18 @@ class Algorithm
             echo "Masukkan data angka terlebih dahulu!\n\n";
             $this->index();
         } else {
-            var_dump(memory_get_usage(true));
-
+            $start_time = microtime(true);
             $int = 0;
             $result = false;
             $count = count($arr);
-
+            
             echo "\n======== Linear Search ========\n";
             echo "Data array   : ";
             $this->print_array($arr);
-
+            
             echo "\nMasukkan angka yang dicari : ";
             $search = trim(fgets(STDIN));
-
+            
             if (!is_numeric($search)) {
                 echo "--------------------------------\n";
                 echo "Masukkan bilangan bulat!\n";
@@ -190,12 +200,15 @@ class Algorithm
                 if ($result == false) {
                     echo "\nAngka $search tidak ditemukan";
                 }
-    
+                
+                $end_time = microtime(true);
+                echo "\n\n";
+                $this->execution_time($start_time, $end_time);
+                
                 echo "\n--------------------------------\n";
                 echo "Kembali ke halaman menu [y/n]? ";
                 $res = trim(fgets(STDIN));
                 echo "--------------------------------\n\n";
-                var_dump(memory_get_usage(true));
                 $this->goto_menu($res);
             }
         }

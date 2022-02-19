@@ -30,8 +30,15 @@ class Algorithm
         }
     }
 
-    private function execution_time($start=null, $end=null)
+    private function mem_convert($size)
     {
+        $unit = ['b','kb','mb','gb','tb','pb'];
+        $i = floor(log($size, 1024));
+        return round($size/pow(1024, ($i)), 2).' '.$unit[$i];
+    }
+
+    private function execution_time($start=null, $end=null)
+    {   
         $times = $end - $start;
         $exe_time = round($times, 6);
         echo "$exe_time ms";
@@ -155,6 +162,7 @@ class Algorithm
 
             $end_time = microtime(true);
             echo "\n\n";
+            echo "mem: " . $this->mem_convert(memory_get_usage()) . "\t";
             $this->execution_time($start_time, $end_time);
 
             echo "\n--------------------------------\n";
@@ -172,7 +180,7 @@ class Algorithm
             $this->index();
         } else {
             $start_time = microtime(true);
-            
+
             echo "\n======== Linear Search ========\n";
             echo "Data array   : ";
             $this->print_array($arr);
@@ -204,6 +212,7 @@ class Algorithm
                 
                 $end_time = microtime(true);
                 echo "\n\n";
+                echo "mem: " . $this->mem_convert(memory_get_usage()) . "\t";
                 $this->execution_time($start_time, $end_time);
                 
                 echo "\n--------------------------------\n";

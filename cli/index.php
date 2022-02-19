@@ -172,9 +172,6 @@ class Algorithm
             $this->index();
         } else {
             $start_time = microtime(true);
-            $int = 0;
-            $result = false;
-            $count = count($arr);
             
             echo "\n======== Linear Search ========\n";
             echo "Data array   : ";
@@ -182,13 +179,17 @@ class Algorithm
             
             echo "\nMasukkan angka yang dicari : ";
             $search = trim(fgets(STDIN));
-            
+
             if (!is_numeric($search)) {
                 echo "--------------------------------\n";
                 echo "Masukkan bilangan bulat!\n";
                 $this->linear_search($arr);
                 
             } else {
+                $int = 0;
+                $result = false;
+                $count = count($arr);
+
                 while ($int < $count) {
                     if ($arr[$int] == $search) {
                         echo "\nAngka $search ditemukan";
